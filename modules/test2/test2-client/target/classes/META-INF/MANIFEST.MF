@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: andyjjt
+Build-Jdk: 17.0.3
+Implementation-Title: test2-client
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.luokf
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/demo-cloud/modules/test2/test2-client
+Created-By: Maven Integration for Eclipse
+

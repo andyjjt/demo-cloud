@@ -24,7 +24,7 @@ ribbon:
   OkToRetryOnAllOperations: false
   MaxAutoRetriesNextServer: 1
   MaxAutoRetries: 0
-  
+
 # 声明式服务
 feign:
 
@@ -33,11 +33,11 @@ feign:
     enabled: true
   httpclient:
     enabled: false
-    
+
   # 启用容错保护、断路器
   hystrix:
     enabled: true
-    
+
   # 请求和响应GZIP压缩支持
   compression:
     request:
@@ -71,7 +71,7 @@ service:
 # 数据库连接
 spring:
   datasource:
-    url: jdbc:mysql://192.168.1.166:3306/test1?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
     username: root
     password: 123456
     driverClassName: com.mysql.jdbc.Driver
@@ -91,18 +91,18 @@ spring:
     filters: stat,wall
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
-    
+
   # 当前环境名称（注意：不可设置为 test 它是单元测试专用的名称）
   profiles:
     active: default
-    
+
   # Consul 服务发现
   cloud:
     consul:
       discovery:
         healthCheckPath: ${server.servlet.context-path}/actuator/health
         healthCheckInterval: 15s
-  
+
   # Redis 连接参数 （RedisProperties）
   redis:
     host: 127.0.0.1
@@ -117,7 +117,7 @@ spring:
         maxIdle: 3
         # 最大活动连接数
         maxActive: 20
-  
+
   # 消息队列服务
 #  rabbitmq:
 #    host: 192.168.11.103
